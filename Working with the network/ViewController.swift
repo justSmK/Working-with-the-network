@@ -22,8 +22,11 @@ class ViewController: UIViewController {
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            print(String(decoding: data!, as: UTF8.self))
-            print(error)
+            
+            if let data = data, let joke = try? JSONDecoder().decode(Joke.self, from: data) {
+                print(joke)
+            }
+            
         }
         
         task.resume()
