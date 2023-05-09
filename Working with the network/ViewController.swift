@@ -12,24 +12,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        makeRequest()
-    }
-
-
-    private func makeRequest() {
-        var request = URLRequest(url: URL(string: "https://v2.jokeapi.dev/joke/Any")!)
-        request.allHTTPHeaderFields = ["authToken": "nil"]
-        request.httpMethod = "GET"
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            if let data = data, let joke = try? JSONDecoder().decode(Joke.self, from: data) {
-                print(joke)
-            }
-            
+//        makeRequest()
+        ApiManager.shared.getUsers { users in
+            //do smth with users
         }
         
-        task.resume()
+        ApiManager.shared.getPosts { posts in
+            //do smth with posts
+        }
+        
+        ApiManager.shared.getAlbums { albums in
+            //do smth with albums
+        }
     }
+
+
+//    private func makeRequest() {
+//        var request = URLRequest(url: URL(string: "https://v2.jokeapi.dev/joke/Any")!)
+//        request.allHTTPHeaderFields = ["authToken": "nil"]
+//        request.httpMethod = "GET"
+//
+//        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+//
+//            if let data = data, let joke = try? JSONDecoder().decode(Joke.self, from: data) {
+//                print(joke)
+//            }
+//
+//        }
+//
+//        task.resume()
+//    }
 }
 

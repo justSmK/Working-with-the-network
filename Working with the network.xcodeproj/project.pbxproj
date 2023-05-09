@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BB0A85CA2A0A6A8E0066CD76 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A85C92A0A6A8E0066CD76 /* Joke.swift */; };
+		BB0A85CD2A0A96FA0066CD76 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A85CC2A0A96FA0066CD76 /* ApiManager.swift */; };
+		BB0A85D22A0A9A8D0066CD76 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A85D12A0A9A8D0066CD76 /* Users.swift */; };
+		BB0A85D42A0A9B000066CD76 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A85D32A0A9B000066CD76 /* Posts.swift */; };
+		BB0A85D62A0A9B230066CD76 /* Albums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0A85D52A0A9B230066CD76 /* Albums.swift */; };
 		BBF56AD92A06C96C003EEBB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF56AD82A06C96C003EEBB4 /* AppDelegate.swift */; };
 		BBF56ADB2A06C96C003EEBB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF56ADA2A06C96C003EEBB4 /* SceneDelegate.swift */; };
 		BBF56ADD2A06C96C003EEBB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF56ADC2A06C96C003EEBB4 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		BB0A85C92A0A6A8E0066CD76 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		BB0A85CC2A0A96FA0066CD76 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		BB0A85D12A0A9A8D0066CD76 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		BB0A85D32A0A9B000066CD76 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		BB0A85D52A0A9B230066CD76 /* Albums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Albums.swift; sourceTree = "<group>"; };
 		BBF56AD52A06C96C003EEBB4 /* Working with the network.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Working with the network.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF56AD82A06C96C003EEBB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBF56ADA2A06C96C003EEBB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB0A85CB2A0A96EB0066CD76 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BB0A85CF2A0A971D0066CD76 /* models */,
+				BB0A85CE2A0A97060066CD76 /* services */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BB0A85CE2A0A97060066CD76 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				BB0A85CC2A0A96FA0066CD76 /* ApiManager.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		BB0A85CF2A0A971D0066CD76 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				BB0A85D52A0A9B230066CD76 /* Albums.swift */,
+				BB0A85D32A0A9B000066CD76 /* Posts.swift */,
+				BB0A85D12A0A9A8D0066CD76 /* Users.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		BBF56ACC2A06C96C003EEBB4 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +93,7 @@
 		BBF56AD72A06C96C003EEBB4 /* Working with the network */ = {
 			isa = PBXGroup;
 			children = (
+				BB0A85CB2A0A96EB0066CD76 /* API */,
 				BBF56AD82A06C96C003EEBB4 /* AppDelegate.swift */,
 				BBF56ADA2A06C96C003EEBB4 /* SceneDelegate.swift */,
 				BBF56ADC2A06C96C003EEBB4 /* ViewController.swift */,
@@ -142,8 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF56ADD2A06C96C003EEBB4 /* ViewController.swift in Sources */,
+				BB0A85D42A0A9B000066CD76 /* Posts.swift in Sources */,
 				BBF56AD92A06C96C003EEBB4 /* AppDelegate.swift in Sources */,
+				BB0A85D62A0A9B230066CD76 /* Albums.swift in Sources */,
+				BB0A85CD2A0A96FA0066CD76 /* ApiManager.swift in Sources */,
 				BB0A85CA2A0A6A8E0066CD76 /* Joke.swift in Sources */,
+				BB0A85D22A0A9A8D0066CD76 /* Users.swift in Sources */,
 				BBF56ADB2A06C96C003EEBB4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
